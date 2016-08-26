@@ -1,0 +1,14 @@
+{
+  "name": "nanabot",
+  "version": "1.0.0",
+  "description": "I'm a bot, bleep, bloop.",
+  "main": "bleep-bloop.js",
+  "author": "nanalan",
+  "private": true,
+  "license": "UNLICENCED",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "node-gitter": "^2.0.5",
+    "remove-markdown": "^0.1.0"
+  }
+}
