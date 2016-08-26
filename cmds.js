@@ -11,7 +11,7 @@ c.halp = c.help = c['?'] = function halp(say) {
 
 c.unknown = say => say(':point_up: $$Say$$ $$$$ $$whaaaat?$$ Unknown command get :worried:')
 
-c.hello = c.hi = c.hey = c.hoi = say => say('hoi!! i\'m $$nanabot$$!')
+c.hello = c.hi = c.hey = c.hoi = say => say('Hey there! I\'m @NanaBot.')
 
 c.lenny = say => say(LENNY)
 c.kappa = say => say(KAPPA)
@@ -32,11 +32,11 @@ c['<'] = say => say('>')
 c.cancer = say => say(`# $$\\huge \\text{it spreads...}$$`)
 c.ayy = say => say(`# $$\\huge \\text{lmao}$$`)
 
-//c.say = (say, ...what) => say(what.join(' '))
-//c.shout = c.saybig = (say, ...what) => say(`# $$\\huge \\text{${what.join(' ')}}$$`)
+c.say = (say, ...what) => say(what.join(' '))
+c.shout = c.saybig = (say, ...what) => say(`# $$\\huge \\text{${what.join(' ')}}$$`)
 c.pls = say => say('nope! :wink:')
 
-//c.tell = (say, who, to, ...what) => say(`Hey, @${who}! ${what.join(' ').replace(/(him|her|it)/g, 'you').replace(/(his|hers|it's)/g, 'your').replace(/(yourelf|itself)/g, 'yourself').replace(/(he|she|it)/g, 'you')}`)
+c.tell = (say, who, to, ...what) => say(`Hey, @${who}! ${what.join(' ').replace(/(him|her|it)/g, 'you').replace(/(his|hers|it's)/g, 'your').replace(/(yourelf|itself)/g, 'yourself').replace(/(he|she|it)/g, 'you')}`)
 
 c.stop = say => say('no')
 c.kys = say => say(':musical_note: :musical_note: :musical_note:\nhttp://youtu.be/M_azCIe_0Kk')

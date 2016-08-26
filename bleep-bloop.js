@@ -17,13 +17,14 @@ gitter.rooms.find(ROOM).then(room => {
     let txt = (msg.model.text || '')
 
     if(msg.operation !== 'create') return
+    if(msg.model.fromUser.username === 'NanaBot') return
     if(txt.substr(0, 8).toLowerCase() !== '@nanabot') return
 
     let args = txt.substr(9).split(' ').map(a => require('remove-markdown')(a).replace(/\$\$/g, ''))
     let cmd = args.splice(0, 1)[0].toLowerCase()
 
-    console.log(cmd + '(' + args.map(a => JSON.stringify(a)).join(', ') + ')');
+    console.log(msg.model.fromUser.username, cmd + '(' + args.map(a => JSON.stringify(a)).join(', ') + ')');
 
-    (cmds[cmd] || cmds.unknown)(msg => room.send(msg + `\n$$$$\n$$$$ $$$$ $$$$ I'm a bot, _bleep, bloop_.`), ...args)
+    (cmds[cmd] || cmds.unknown)(msg => room.send(msg + `\n$$$$ $$$$ $$$$ $$$$ I'm a bot, _bleep, bloop_. [source](https://github.com/NanaBot/nanabot)`), ...args)
   })
 })
