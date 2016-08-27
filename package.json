@@ -7,8 +7,11 @@
   "private": true,
   "license": "UNLICENCED",
   "dependencies": {
+    "discord.js": "^8.1.0",
     "dotenv": "^2.0.0",
+    "google": "^2.1.0",
     "node-gitter": "^2.0.5",
+    "profanity-censor": "^1.0.4",
     "remove-markdown": "^0.1.0"
   }
 }
